@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { Route, Switch } from "react-router-dom";
 import getDataFromApi from "../services/api";
 import CharacterList from "./CharacterList";
-//import CharacterCard from "./CharacterCard";
-// import CharacterDetail from "./CharacterDetail";
+import CharacterDetail from "./CharacterDetail";
 import Filters from "./Filters";
-import { Route, Switch } from "react-router-dom";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -24,13 +23,20 @@ function App() {
   const filteredCharacters = characters.filter((character) => {
     return character.name.toLowerCase().includes(name.toLowerCase());
   });
-  console.log(filteredCharacters);
+  //   console.log(filteredCharacters);
+  const renderDetail = (props) => {
+    const id = props.match.params.id;
+    const selectedCharacter = characters.find((character) => {
+      return character.id === id;
+    });
+    return <CharacterDetail selectedCharacter={selectedCharacter} />;
+  };
   return (
     <div className="App">
       <Filters handleFilter={handleFilter} />
       <CharacterList characters={filteredCharacters} />
       <Switch>
-        <Route path="/character/:id" />
+        <Route path="/character/:id" render={renderDetail} />
       </Switch>
     </div>
   );

@@ -1,4 +1,3 @@
-import CharacterDetail from "./CharacterDetail";
 import { Link } from "react-router-dom";
 
 function CharacterCard(props) {
