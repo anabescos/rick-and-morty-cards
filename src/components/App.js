@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import getDataFromApi from "../services/api";
 import CharacterList from "./CharacterList";
-import CharacterCard from "./CharacterCard";
+//import CharacterCard from "./CharacterCard";
 import CharacterDetail from "./CharacterDetail";
-import Filters from "./Filters";
-import { Route, Switch } from "react-router-dom";
+// import Filters from "./Filters";
+//import { Route, Switch } from "react-router-dom";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -14,7 +14,7 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <Filters />
+      {/* <Filters /> */}
       <CharacterList characters={characters} />
     </div>
   );
