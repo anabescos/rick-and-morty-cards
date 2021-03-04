@@ -8,6 +8,7 @@ import Filters from "./Filters";
 function App() {
   const [characters, setCharacters] = useState([]);
   const [name, setName] = useState("");
+  const [species, setSpecies] = useState("");
 
   useEffect(() => {
     getDataFromApi().then((data) => setCharacters(data));
