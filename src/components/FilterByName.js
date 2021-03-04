@@ -13,8 +13,9 @@ const FilterByName = (props) => {
       </label>
       <input
         className="form__input-text"
-        type="text"
         name="name"
+        type="text"
+        value={props.name}
         id="name"
         onChange={handleChange}
       />

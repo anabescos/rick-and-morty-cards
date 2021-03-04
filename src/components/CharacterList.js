@@ -11,6 +11,7 @@ const CharacterList = (props) => {
       <li key={eachCharacter.id}>
         <CharacterCard info={eachCharacter} />
       </li>
+      // Since characterData is an array, we have to do a ternary conditional below and set length>0 so it renders the list
     );
   });
   return (

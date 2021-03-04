@@ -1,6 +1,9 @@
+import { Link } from "react-router-dom";
+
 function CharacterDetail(props) {
   return (
     <section>
+      <Link to="/"> Return </Link>
       <img
         src={props.selectedCharacter.image}
         alt={props.selectedCharacter.name}

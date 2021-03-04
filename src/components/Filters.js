@@ -2,11 +2,17 @@ import FilterByName from "./FilterByName";
 import FilterBySpecies from "./FilterBySpecies";
 
 const Filters = (props) => {
+  const handleSubmit = (ev) => {
+    ev.preventDefault();
+  };
   return (
     <section>
-      <form>
-        <FilterByName handleFilter={props.handleFilter} />
-        <FilterBySpecies handleFilter={props.handleFilter} />
+      <form onSubmit={handleSubmit}>
+        <FilterByName handleFilter={props.handleFilter} name={props.name} />
+        <FilterBySpecies
+          handleFilter={props.handleFilter}
+          species={props.species}
+        />
       </form>
     </section>
   );

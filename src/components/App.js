@@ -43,7 +43,7 @@ function App() {
   };
   return (
     <div className="App">
-      <Filters handleFilter={handleFilter} />
+      <Filters handleFilter={handleFilter} name={name} species={species} />
 
       <Switch>
         <Route exact path="/">
