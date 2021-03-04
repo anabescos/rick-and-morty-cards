@@ -8,7 +8,7 @@ const FilterBySpecies = (props) => {
 
   return (
     <>
-      <label htmlFor="species">Filtrar por especie:</label>
+      <label htmlFor="species">Filter by species:</label>
       <select name="species" id="species" onChange={handleChange}>
         <option value="All">All</option>
         <option value="Human">Human</option>
