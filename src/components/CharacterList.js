@@ -13,7 +13,15 @@ const CharacterList = (props) => {
       </li>
     );
   });
-  return <ul>{characterData}</ul>;
+  return (
+    <ul>
+      {characterData.length > 0 ? (
+        characterData
+      ) : (
+        <p>This character does not exist</p>
+      )}
+    </ul>
+  );
 };
 
 export default CharacterList;
