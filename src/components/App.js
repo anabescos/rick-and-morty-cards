@@ -41,7 +41,7 @@ const App = () => {
     return <CharacterDetail selectedCharacter={selectedCharacter} />;
   };
   return (
-    <body className="Page">
+    <div className="page">
       <Header />
       <main>
         <Filters handleFilter={handleFilter} name={name} species={species} />
@@ -53,7 +53,7 @@ const App = () => {
           <Route path="/character/:id" render={renderDetail} />
         </Switch>
       </main>
-    </body>
+    </div>
   );
 };
 

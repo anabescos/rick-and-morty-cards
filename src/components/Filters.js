@@ -6,8 +6,8 @@ const Filters = (props) => {
     ev.preventDefault();
   };
   return (
-    <section>
-      <form onSubmit={handleSubmit}>
+    <section className="filters">
+      <form className="filters__form" onSubmit={handleSubmit}>
         <FilterByName handleFilter={props.handleFilter} name={props.name} />
         <FilterBySpecies
           handleFilter={props.handleFilter}

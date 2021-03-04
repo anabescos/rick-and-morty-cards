@@ -8,8 +8,11 @@ const FilterBySpecies = (props) => {
 
   return (
     <>
-      <label htmlFor="species">Filter by species:</label>
+      <label className="filters__form--speciesTitle" htmlFor="species">
+        Filter by species:
+      </label>
       <select
+        className="filters__form--speciesInput"
         name="species"
         id="species"
         value={props.species}

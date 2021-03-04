@@ -21,11 +21,15 @@ function CharacterCard(props) {
   return (
     <>
       <Link to={`/character/${props.info.id}`}>
-        <img src={props.info.image} alt={props.info.name} />
-        <h3>{props.info.name}</h3>
-        <h4>{props.info.species}</h4>
-        <span>{statusIcon()}</span>
-        <span>{speciesIcon()}</span>
+        <img
+          className="cardList__eachCard--img"
+          src={props.info.image}
+          alt={props.info.name}
+        />
+        <h3 className="cardList__eachCard--name">{props.info.name}</h3>
+        <h4 className="cardList__eachCard--species">{props.info.species}</h4>
+        <span className="cardList__eachCard--icon">{statusIcon()}</span>
+        <span className="cardList__eachCard--icon">{speciesIcon()}</span>
       </Link>
     </>
   );

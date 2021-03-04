@@ -2,18 +2,32 @@ import { Link } from "react-router-dom";
 
 function CharacterDetail(props) {
   return (
-    <section>
-      <Link to="/"> Return </Link>
+    <section className="details">
+      <Link className="details__link" to="/">
+        {" "}
+        Return{" "}
+      </Link>
       <img
+        className="details__img"
         src={props.selectedCharacter.image}
         alt={props.selectedCharacter.name}
       />
-      <ul>
-        <li>Name:{props.selectedCharacter.name}</li>
-        <li>Gender:{props.selectedCharacter.gender} </li>
-        <li>Species:{props.selectedCharacter.species}</li>
-        <li>Origin:{props.selectedCharacter.origin}</li>
-        <li>Number of episodes featured:{props.selectedCharacter.episodes}</li>
+      <ul className="details__list">
+        <li className="details__list--name">
+          Name:{props.selectedCharacter.name}
+        </li>
+        <li className="details__list--gender">
+          Gender:{props.selectedCharacter.gender}{" "}
+        </li>
+        <li className="details__list--species">
+          Species:{props.selectedCharacter.species}
+        </li>
+        <li className="details__list--origin">
+          Origin:{props.selectedCharacter.origin}
+        </li>
+        <li className="details__list--episodes">
+          Number of episodes featured:{props.selectedCharacter.episodes}
+        </li>
       </ul>
     </section>
   );
