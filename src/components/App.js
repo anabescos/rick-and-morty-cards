@@ -31,27 +31,28 @@ function App() {
       return species === "All" ? true : character.species === species;
     });
 
-  //   console.log(filteredCharacters);
   const renderDetail = (props) => {
-    // console.log(props.match);
     const id = parseInt(props.match.params.id);
     const selectedCharacter = characters.find((character) => {
       return character.id === id;
     });
-    // console.log(selectedCharacter);
+
     return <CharacterDetail selectedCharacter={selectedCharacter} />;
   };
   return (
-    <div className="App">
-      <Filters handleFilter={handleFilter} name={name} species={species} />
+    <body className="App">
+      <header></header>
+      <main>
+        <Filters handleFilter={handleFilter} name={name} species={species} />
 
-      <Switch>
-        <Route exact path="/">
-          <CharacterList characters={filteredCharacters} />
-        </Route>
-        <Route path="/character/:id" render={renderDetail} />
-      </Switch>
-    </div>
+        <Switch>
+          <Route exact path="/">
+            <CharacterList characters={filteredCharacters} />
+          </Route>
+          <Route path="/character/:id" render={renderDetail} />
+        </Switch>
+      </main>
+    </body>
   );
 }
 
