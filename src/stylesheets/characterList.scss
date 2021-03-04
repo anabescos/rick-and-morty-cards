@@ -1,0 +1,25 @@
+.cardList {
+  margin: 25px;
+  padding: 10px;
+  //   border: 5px #01b4c6 solid;
+  border-radius: 20px;
+  background-color: #3a4767b4;
+  display: grid;
+  grid-columns: 1;
+  grid-template-columns: 1fr;
+  grid-row-gap: 20px;
+  justify-items: center;
+
+  &__eachCard {
+    width: 200px;
+    height: 320px;
+    border: white 5px solid;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+    background-color: #131313;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

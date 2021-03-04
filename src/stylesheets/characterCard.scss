@@ -1,0 +1,23 @@
+.cardList__eachCard {
+  &--img {
+    width: 150px;
+    height: 150px;
+    margin-top: 8px;
+    border-radius: 5px;
+  }
+  &--name {
+    width: 150px;
+    line-height: 1.6;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  &--icon {
+    border: #97ce4c 2px solid;
+    border-radius: 100%;
+    width: 30px;
+  }
+}
+.fas {
+  margin: 20px 10px;
+}
