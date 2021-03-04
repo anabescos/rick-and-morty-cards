@@ -8,7 +8,7 @@ import Filters from "./Filters";
 function App() {
   const [characters, setCharacters] = useState([]);
   const [name, setName] = useState("");
-  const [species, setSpecies] = useState("");
+  const [species, setSpecies] = useState("All");
 
   useEffect(() => {
     getDataFromApi().then((data) => setCharacters(data));
@@ -17,13 +17,20 @@ function App() {
   const handleFilter = (inputChange) => {
     if (inputChange.key === "name") {
       setName(inputChange.value);
+    } else if (inputChange.key === "species") {
+      setSpecies(inputChange.value);
     }
     // console.log(inputChange);
   };
 
-  const filteredCharacters = characters.filter((character) => {
-    return character.name.toLowerCase().includes(name.toLowerCase());
-  });
+  const filteredCharacters = characters
+    .filter((character) => {
+      return character.name.toLowerCase().includes(name.toLowerCase());
+    })
+    .filter((character) => {
+      return species === "All" ? true : character.species === species;
+    });
+
   //   console.log(filteredCharacters);
   const renderDetail = (props) => {
     // console.log(props.match);
