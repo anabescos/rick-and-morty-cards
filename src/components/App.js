@@ -4,8 +4,9 @@ import getDataFromApi from "../services/api";
 import CharacterList from "./CharacterList";
 import CharacterDetail from "./CharacterDetail";
 import Filters from "./Filters";
+import Header from "./Header";
 
-function App() {
+const App = () => {
   const [characters, setCharacters] = useState([]);
   const [name, setName] = useState("");
   const [species, setSpecies] = useState("All");
@@ -40,8 +41,8 @@ function App() {
     return <CharacterDetail selectedCharacter={selectedCharacter} />;
   };
   return (
-    <body className="App">
-      <header></header>
+    <body className="Page">
+      <Header />
       <main>
         <Filters handleFilter={handleFilter} name={name} species={species} />
 
@@ -54,6 +55,6 @@ function App() {
       </main>
     </body>
   );
-}
+};
 
 export default App;
