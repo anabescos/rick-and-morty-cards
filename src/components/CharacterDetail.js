@@ -1,15 +1,16 @@
 function CharacterDetail(props) {
-  console.log(props);
   return (
     <section>
-      {/* <img
-        className="card__img"
+      <img
         src={props.selectedCharacter.image}
         alt={props.selectedCharacter.name}
-      /> */}
-      <ul className="ml-1 mt-1">
-        {/* <li>Género:{props.selectedCharacter.gender} </li> */}
-        <li>nombre: Hola</li>
+      />
+      <ul>
+        <li>Name:{props.selectedCharacter.name}</li>
+        <li>Gender:{props.selectedCharacter.gender} </li>
+        <li>Species:{props.selectedCharacter.species}</li>
+        <li>Origin:{props.selectedCharacter.origin}</li>
+        <li>Number of episodes featured:{props.selectedCharacter.episodes}</li>
       </ul>
     </section>
   );

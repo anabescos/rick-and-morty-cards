@@ -12,12 +12,12 @@ function App() {
   useEffect(() => {
     getDataFromApi().then((data) => setCharacters(data));
   }, []);
-  console.log(name);
+  // console.log(name);
   const handleFilter = (inputChange) => {
     if (inputChange.key === "name") {
       setName(inputChange.value);
     }
-    console.log(inputChange);
+    // console.log(inputChange);
   };
 
   const filteredCharacters = characters.filter((character) => {
@@ -25,17 +25,22 @@ function App() {
   });
   //   console.log(filteredCharacters);
   const renderDetail = (props) => {
-    const id = props.match.params.id;
+    // console.log(props.match);
+    const id = parseInt(props.match.params.id);
     const selectedCharacter = characters.find((character) => {
       return character.id === id;
     });
+    // console.log(selectedCharacter);
     return <CharacterDetail selectedCharacter={selectedCharacter} />;
   };
   return (
     <div className="App">
       <Filters handleFilter={handleFilter} />
-      <CharacterList characters={filteredCharacters} />
+
       <Switch>
+        <Route exact path="/">
+          <CharacterList characters={filteredCharacters} />
+        </Route>
         <Route path="/character/:id" render={renderDetail} />
       </Switch>
     </div>
