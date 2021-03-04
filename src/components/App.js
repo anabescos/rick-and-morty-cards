@@ -5,6 +5,7 @@ import CharacterList from "./CharacterList";
 import CharacterDetail from "./CharacterDetail";
 import Filters from "./Filters";
 import Header from "./Header";
+import "../stylesheets/App.scss";
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
@@ -42,8 +43,9 @@ const App = () => {
   };
   return (
     <div className="page">
-      <Header />
-      <main>
+      <div className="layer">
+        <Header />
+
         <Filters handleFilter={handleFilter} name={name} species={species} />
 
         <Switch>
@@ -52,7 +54,7 @@ const App = () => {
           </Route>
           <Route path="/character/:id" render={renderDetail} />
         </Switch>
-      </main>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,18 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+
+.header {
+  width: 100%;
+  padding: 30px 0;
+  text-align: center;
+  &__logo {
+    width: 200px;
+    @include tablet {
+      width: 400px;
+    }
+    @include desktop {
+      width: 500px;
+    }
+  }
+}
