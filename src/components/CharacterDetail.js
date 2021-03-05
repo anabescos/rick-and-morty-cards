@@ -5,13 +5,19 @@ import "../stylesheets/characterDetail.scss";
 function CharacterDetail(props) {
   if (props.selectedCharacter === undefined) {
     return (
-      <div className="pickleContainer">
-        <img
-          className="pickleContainer__img"
-          src={PickleRick}
-          alt="character not found"
-        />
-      </div>
+      <>
+        <Link className="link" to="/">
+          {" "}
+          Return{" "}
+        </Link>
+        <div className="pickleContainer">
+          <img
+            className="pickleContainer__img"
+            src={PickleRick}
+            alt="character not found"
+          />
+        </div>
+      </>
     );
   } else {
     return (
