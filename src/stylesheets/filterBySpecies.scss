@@ -1,0 +1,14 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+
+.filters {
+  &__form {
+    &--speciesTitle {
+      margin-right: 20px;
+    }
+    &--speciesInput {
+      margin-right: 20px;
+    }
+  }
+}

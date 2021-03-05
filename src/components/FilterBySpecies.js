@@ -1,3 +1,5 @@
+import "../stylesheets/filterBySpecies.scss";
+
 const FilterBySpecies = (props) => {
   const handleChange = (ev) => {
     props.handleFilter({

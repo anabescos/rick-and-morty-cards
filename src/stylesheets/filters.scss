@@ -3,4 +3,19 @@
 @import "mixins";
 
 .filters {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+  }
 }

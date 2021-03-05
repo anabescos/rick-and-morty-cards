@@ -1,0 +1,14 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+
+.filters {
+  &__form {
+    &--nameTitle {
+      margin-right: 20px;
+    }
+    &--nameInput {
+      margin-right: 20px;
+    }
+  }
+}
