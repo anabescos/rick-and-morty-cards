@@ -2,6 +2,12 @@
 @import "variables";
 @import "mixins";
 
+.layer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .details {
   width: 280px;
   height: 100%;
@@ -14,14 +20,33 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  &__link {
-    padding-bottom: 20px;
+  @include tablet {
+    margin: 80px 150px;
+    flex-direction: row;
+    height: 500px;
+    width: 500px;
   }
+  @include desktop {
+    flex-direction: row;
+    height: 500px;
+    width: 800px;
+  }
+
   &__img {
     width: 150px;
     height: 150px;
     margin-top: 8px;
     border-radius: 5px;
+    @include tablet {
+      height: 200px;
+      width: 200px;
+      margin-right: 40px;
+      flex-direction: row;
+    }
+    @include desktop {
+      height: 300px;
+      width: 300px;
+    }
   }
 
   &__list {
@@ -31,10 +56,32 @@
       line-height: 1.6;
       font-size: 16px;
       text-align: left;
+      @include tablet {
+        flex-wrap: wrap;
+      }
+      @include desktop {
+        width: 70%;
+        font-size: 20px;
+      }
     }
   }
 }
 
 .description {
   display: flex;
+  @include tablet {
+    display: inline;
+  }
+}
+
+.link {
+  margin-top: 50px;
+  text-align: right;
+
+  @include tablet {
+    font-size: 20px;
+  }
+  @include desktop {
+    font-size: 24px;
+  }
 }
