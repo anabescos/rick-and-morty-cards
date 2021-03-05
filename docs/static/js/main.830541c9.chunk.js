@@ -1,2 +1,0 @@
-(this["webpackJsonpmodule-3-lesson-2-exercise"]=this["webpackJsonpmodule-3-lesson-2-exercise"]||[]).push([[0],{10:function(e,n,s){"use strict";s.r(n);var t=s(0),c=s.n(t),o=s(3),r=s.n(o),i=(s(8),s(1));var l=function(){return Object(i.jsx)("div",{className:"App",children:"Hello, World!"})};r.a.render(Object(i.jsx)(c.a.StrictMode,{children:Object(i.jsx)(l,{})}),document.getElementById("root"))},8:function(e,n,s){}},[[10,1,2]]]);
-//# sourceMappingURL=main.830541c9.chunk.js.map
