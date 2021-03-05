@@ -4,12 +4,14 @@
     height: 150px;
     margin-top: 8px;
     border-radius: 5px;
+    border: white 3px solid;
   }
   &--name {
     width: 150px;
     line-height: 1.6;
     font-size: 16px;
     text-align: center;
+    color: white;
   }
 
   &--icon {
