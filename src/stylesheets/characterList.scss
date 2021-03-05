@@ -43,4 +43,45 @@
       margin-left: 10px;
     }
   }
+  &__notFound {
+    width: 280px;
+    height: 300px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    border: white 5px solid;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 30px 10px;
+    background: url(../images/CardBG.png) center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 10px 10px 8px 0px #131313bd;
+    @include tablet {
+      margin: 80px 150px;
+
+      height: 500px;
+      width: 500px;
+    }
+    @include desktop {
+      text-align: center;
+      height: 500px;
+      width: 800px;
+    }
+    &--parasite {
+      width: 200px;
+      border: white 3px solid;
+      border-radius: 20px;
+      margin: 50px;
+      @include tablet {
+        width: 400px;
+        height: 250px;
+        margin: 100px;
+      }
+      @include desktop {
+        font-size: 24px;
+      }
+    }
+  }
 }

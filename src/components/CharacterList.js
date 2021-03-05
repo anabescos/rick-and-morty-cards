@@ -1,5 +1,6 @@
 import CharacterCard from "./CharacterCard";
 import "../stylesheets/characterList.scss";
+import parasites from "../images/parasites.png";
 
 const CharacterList = (props) => {
   // To sort them by name, it gets the index, so you need to specify the data you want to sort it by.
@@ -20,7 +21,14 @@ const CharacterList = (props) => {
       {characterData.length > 0 ? (
         characterData
       ) : (
-        <p>This character does not exist</p>
+        <li className="cardList__notFound">
+          Not a character, it's a parasite!{" "}
+          <img
+            className="cardList__notFound--parasite"
+            src={parasites}
+            alt=""
+          />
+        </li>
       )}
     </ul>
   );
