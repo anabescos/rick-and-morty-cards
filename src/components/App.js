@@ -45,18 +45,19 @@ const App = () => {
     <div className="page">
       <div className="layer">
         <Header />
-
-        <Switch>
-          <Route exact path="/">
-            <Filters
-              handleFilter={handleFilter}
-              name={name}
-              species={species}
-            />
-            <CharacterList characters={filteredCharacters} />
-          </Route>
-          <Route path="/character/:id" render={renderDetail} />
-        </Switch>
+        <main>
+          <Switch>
+            <Route exact path="/">
+              <Filters
+                handleFilter={handleFilter}
+                name={name}
+                species={species}
+              />
+              <CharacterList characters={filteredCharacters} />
+            </Route>
+            <Route path="/character/:id" render={renderDetail} />
+          </Switch>
+        </main>
       </div>
     </div>
   );

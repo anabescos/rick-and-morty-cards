@@ -7,8 +7,7 @@ function CharacterDetail(props) {
     return (
       <>
         <Link className="link" to="/">
-          {" "}
-          Return{" "}
+          Return
         </Link>
         <div className="pickleContainer">
           <img
