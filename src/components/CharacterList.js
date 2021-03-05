@@ -6,7 +6,7 @@ const CharacterList = (props) => {
   const sortedList = props.characters.sort((a, b) =>
     a.name > b.name ? 1 : a.name < b.name ? -1 : 0
   );
-  console.log(sortedList);
+
   const characterData = sortedList.map((eachCharacter) => {
     return (
       <li key={eachCharacter.id} className="cardList__eachCard">

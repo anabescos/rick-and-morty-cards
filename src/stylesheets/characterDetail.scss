@@ -16,7 +16,7 @@
   border-radius: 10px;
   margin: 20px;
   padding: 10px;
-  background-color: #131313;
+  background: url(../images/CardBG.png) center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,10 +89,29 @@
 }
 
 .pickleContainer {
-  width: 100%;
+  width: 280px;
+  height: 100%;
+  border: white 5px solid;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px;
+  background: url(../images/CardBG.png) center;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  box-shadow: 10px 10px 8px 0px #131313bd;
+  @include tablet {
+    margin: 80px 150px;
+    flex-direction: row;
+    height: 500px;
+    width: 500px;
+  }
+  @include desktop {
+    flex-direction: row;
+    height: 500px;
+    width: 800px;
+  }
   &__img {
     width: 300px;
     margin: 50px;
