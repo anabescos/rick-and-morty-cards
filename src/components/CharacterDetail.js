@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import PickleRick from "../images/PickleRick.png";
 import "../stylesheets/characterDetail.scss";
+import PropTypes from "prop-types";
 
 function CharacterDetail(props) {
   if (props.selectedCharacter === undefined) {
@@ -69,5 +70,13 @@ function CharacterDetail(props) {
     );
   }
 }
+CharacterDetail.propTypes = {
+  info: PropTypes.shape({
+    image: PropTypes.string,
+    name: PropTypes.string,
+    species: PropTypes.string,
+    id: PropTypes.number,
+  }),
+};
 
 export default CharacterDetail;

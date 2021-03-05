@@ -4,18 +4,18 @@ import "../stylesheets/characterCard.scss";
 function CharacterCard(props) {
   const statusIcon = () => {
     if (props.info.status === "Dead") {
-      return <i class="fas fa-skull-crossbones"></i>;
+      return <i className="fas fa-skull-crossbones"></i>;
     } else if (props.info.status === "unknown") {
       return <i className="fas fa-question"></i>;
     } else {
-      return <i class="fas fa-heartbeat"></i>;
+      return <i className="fas fa-heartbeat"></i>;
     }
   };
   const speciesIcon = () => {
     return props.info.species === "Alien" ? (
-      <i class="fas fa-pastafarianism"></i>
+      <i className="fas fa-pastafarianism"></i>
     ) : (
-      <i class="fas fa-user"></i>
+      <i className="fas fa-user"></i>
     );
   };
 

@@ -45,7 +45,7 @@ const App = () => {
     <div className="page">
       <div className="layer">
         <Header />
-        <main>
+        <main className="main">
           <Switch>
             <Route exact path="/">
               <Filters
