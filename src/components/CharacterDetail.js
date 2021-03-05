@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom";
+import PickleRick from "../images/PickleRick.png";
+import "../stylesheets/characterDetail.scss";
 
 function CharacterDetail(props) {
   if (props.selectedCharacter === undefined) {
     return (
-      <div>
-        <img src="../images/PickleRick.png" alt="character not found" />
+      <div className="pickleContainer">
+        <img
+          className="pickleContainer__img"
+          src={PickleRick}
+          alt="character not found"
+        />
       </div>
     );
   } else {
@@ -20,20 +26,37 @@ function CharacterDetail(props) {
           alt={props.selectedCharacter.name}
         />
         <ul className="details__list">
-          <li className="details__list--name">
-            Name:{props.selectedCharacter.name}
+          <li className="details__list--data">
+            Name:
+            <span className="description"> {props.selectedCharacter.name}</span>
           </li>
-          <li className="details__list--gender">
-            Gender:{props.selectedCharacter.gender}{" "}
+          <li className="details__list--data">
+            Gender:
+            <span className="description">
+              {" "}
+              {props.selectedCharacter.gender}
+            </span>
           </li>
-          <li className="details__list--species">
-            Species:{props.selectedCharacter.species}
+          <li className="details__list--data">
+            Species:
+            <span className="description">
+              {" "}
+              {props.selectedCharacter.species}
+            </span>
           </li>
-          <li className="details__list--origin">
-            Origin:{props.selectedCharacter.origin}
+          <li className="details__list--data">
+            Origin:
+            <span className="description">
+              {" "}
+              {props.selectedCharacter.origin}
+            </span>
           </li>
-          <li className="details__list--episodes">
-            Number of episodes featured:{props.selectedCharacter.episodes}
+          <li className="details__list--data">
+            Number of episodes featured:
+            <span className="description">
+              {" "}
+              {props.selectedCharacter.episodes}
+            </span>
           </li>
         </ul>
       </section>
