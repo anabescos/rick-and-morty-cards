@@ -46,10 +46,13 @@ const App = () => {
       <div className="layer">
         <Header />
 
-        <Filters handleFilter={handleFilter} name={name} species={species} />
-
         <Switch>
           <Route exact path="/">
+            <Filters
+              handleFilter={handleFilter}
+              name={name}
+              species={species}
+            />
             <CharacterList characters={filteredCharacters} />
           </Route>
           <Route path="/character/:id" render={renderDetail} />
