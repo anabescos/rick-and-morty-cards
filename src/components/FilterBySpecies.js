@@ -1,4 +1,5 @@
 import "../stylesheets/filterBySpecies.scss";
+import PropTypes from "prop-types";
 
 const FilterBySpecies = (props) => {
   const handleChange = (ev) => {
@@ -26,5 +27,8 @@ const FilterBySpecies = (props) => {
       </select>
     </>
   );
+};
+FilterBySpecies.propTypes = {
+  species: PropTypes.string,
 };
 export default FilterBySpecies;

@@ -1,6 +1,7 @@
 import CharacterCard from "./CharacterCard";
 import "../stylesheets/characterList.scss";
 import parasites from "../images/parasites.png";
+import PropTypes from "prop-types";
 
 const CharacterList = (props) => {
   // To sort them by name, it gets the index, so you need to specify the data you want to sort it by.
@@ -26,12 +27,18 @@ const CharacterList = (props) => {
           <img
             className="cardList__notFound--parasite"
             src={parasites}
-            alt=""
+            alt="this character does not exist"
           />
         </li>
       )}
     </ul>
   );
+};
+
+CharacterList.propTypes = {
+  filteredCharacters: PropTypes.shape({
+    id: PropTypes.number,
+  }),
 };
 
 export default CharacterList;

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "../stylesheets/characterCard.scss";
+import PropTypes from "prop-types";
 
 function CharacterCard(props) {
   const statusIcon = () => {
@@ -35,5 +36,13 @@ function CharacterCard(props) {
     </>
   );
 }
+CharacterCard.propTypes = {
+  info: PropTypes.shape({
+    image: PropTypes.string,
+    name: PropTypes.string,
+    species: PropTypes.string,
+    id: PropTypes.number,
+  }),
+};
 
 export default CharacterCard;

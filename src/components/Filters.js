@@ -1,6 +1,7 @@
 import FilterByName from "./FilterByName";
 import FilterBySpecies from "./FilterBySpecies";
 import "../stylesheets/filters.scss";
+import PropTypes from "prop-types";
 
 const Filters = (props) => {
   const handleSubmit = (ev) => {
@@ -17,5 +18,9 @@ const Filters = (props) => {
       </form>
     </section>
   );
+};
+Filters.propTypes = {
+  name: PropTypes.string,
+  species: PropTypes.string,
 };
 export default Filters;

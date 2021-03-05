@@ -71,11 +71,14 @@ function CharacterDetail(props) {
   }
 }
 CharacterDetail.propTypes = {
-  info: PropTypes.shape({
+  selecterCharacter: PropTypes.shape({
     image: PropTypes.string,
     name: PropTypes.string,
     species: PropTypes.string,
     id: PropTypes.number,
+    gender: PropTypes.string,
+    origin: PropTypes.string,
+    episodes: PropTypes.string,
   }),
 };
 

@@ -1,4 +1,5 @@
 import "../stylesheets/filterByName.scss";
+import PropTypes from "prop-types";
 
 const FilterByName = (props) => {
   const handleChange = (ev) => {
@@ -23,5 +24,8 @@ const FilterByName = (props) => {
       />
     </>
   );
+};
+FilterByName.propTypes = {
+  name: PropTypes.string,
 };
 export default FilterByName;
