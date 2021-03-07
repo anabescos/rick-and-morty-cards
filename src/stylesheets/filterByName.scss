@@ -5,16 +5,16 @@
 .filters {
   &__form {
     &--nameTitle {
-      margin: 10px;
+      margin: 0 20px;
       @include tablet {
-        // width: 20vw;
         font-size: 20px;
       }
     }
     &--nameInput {
       @include tablet {
         margin-right: 20px;
-        // width: 20vw;
+        width: 150px;
+        height: 40px;
       }
     }
   }

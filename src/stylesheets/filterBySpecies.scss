@@ -5,15 +5,17 @@
 .filters {
   &__form {
     &--speciesTitle {
-      // margin-right: 20px;
       @include tablet {
-        // width: 20vw;
+        margin-right: 20px;
+
         font-size: 20px;
       }
     }
     &--speciesInput {
       @include tablet {
-        // width: 20vw;
+        margin-right: 20px;
+        width: 80px;
+        height: 40px;
       }
     }
   }

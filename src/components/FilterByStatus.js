@@ -9,7 +9,7 @@ const FilterByStatus = (props) => {
     });
   };
 
-  const statusList = props.status.map((eachStatus, i) => {
+  const statusList = props.statusOptions.map((eachStatus, i) => {
     return (
       <label key={i} className="filters__form--statusSubtitle">
         <input
@@ -17,6 +17,7 @@ const FilterByStatus = (props) => {
           type="checkbox"
           name="status"
           value={eachStatus}
+          checked={props.status.includes(eachStatus)}
           onChange={handleChange}
         />
         {eachStatus}

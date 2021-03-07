@@ -70,7 +70,8 @@ const App = () => {
                 name={name}
                 species={species}
                 handleFilter={handleFilter}
-                status={getStatus()}
+                statusOptions={getStatus()}
+                status={status}
               />
               <CharacterList characters={filteredCharacters} />
             </Route>
