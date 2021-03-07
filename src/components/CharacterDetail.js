@@ -7,10 +7,14 @@ function CharacterDetail(props) {
   if (props.selectedCharacter === undefined) {
     return (
       <>
-        <Link className="link" to="/">
-          Return
-        </Link>
+        {" "}
+        <button className="linkButton">
+          <Link className="link" to="/">
+            Home
+          </Link>
+        </button>
         <div className="pickleContainer">
+          <p className="pickleContainer__message">404 error URL not found</p>
           <img
             className="pickleContainer__img"
             src={PickleRick}
@@ -22,10 +26,12 @@ function CharacterDetail(props) {
   } else {
     return (
       <>
-        <Link className="link" to="/">
-          {" "}
-          Return{" "}
-        </Link>
+        <button className="linkButton">
+          <Link className="link" to="/">
+            {" "}
+            Home{" "}
+          </Link>
+        </button>
         <section className="details">
           <img
             className="details__img"

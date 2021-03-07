@@ -75,10 +75,23 @@
     display: inline;
   }
 }
-
+.linkButton {
+  width: 90px;
+  background-color: #97ce4c;
+  border-radius: 20px;
+  box-shadow: 10px 10px 8px 0px #13131388;
+  @include tablet {
+    width: 110px;
+  }
+  @include desktop {
+    width: 150px;
+  }
+}
 .link {
   margin-top: 50px;
   text-align: right;
+
+  color: white;
 
   @include tablet {
     font-size: 20px;
@@ -103,14 +116,24 @@
   box-shadow: 10px 10px 8px 0px #131313bd;
   @include tablet {
     margin: 80px 150px;
-    flex-direction: row;
+    // flex-direction: row;
     height: 500px;
     width: 500px;
   }
   @include desktop {
-    flex-direction: row;
+    // flex-direction: row;
     height: 500px;
     width: 800px;
+  }
+  &__message {
+    margin-top: 20px;
+    @include tablet {
+      margin-top: 100px;
+      font-size: 20px;
+    }
+    @include desktop {
+      font-size: 24px;
+    }
   }
   &__img {
     width: 300px;
@@ -118,10 +141,6 @@
     @include tablet {
       width: 500px;
       height: 300px;
-      margin: 100px;
-    }
-    @include desktop {
-      font-size: 24px;
     }
   }
 }
