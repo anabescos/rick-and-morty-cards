@@ -13,6 +13,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     @include tablet {
       flex-direction: row;
@@ -23,7 +24,6 @@
 }
 
 .resetButton {
-  text-align: center;
   width: 90px;
   height: 40px;
   display: flex;
@@ -33,7 +33,7 @@
   border-radius: 20px;
   box-shadow: 10px 10px 8px 0px #13131388;
   padding-top: 15px;
-  margin: 10px 0 0 100px;
+  margin-top: 10px;
   cursor: pointer;
   &:hover {
     transform: scale(1.1);
