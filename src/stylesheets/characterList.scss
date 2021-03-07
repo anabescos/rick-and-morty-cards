@@ -60,13 +60,15 @@
     justify-content: center;
     box-shadow: 10px 10px 8px 0px #131313bd;
     @include tablet {
-      grid-column: 2/3;
+      grid-column: 1/4;
+
       margin: 80px 150px;
       height: 500px;
       width: 500px;
       font-size: 24px;
     }
     @include desktop {
+      grid-column: 2/4;
       height: 500px;
       width: 800px;
     }
