@@ -2,6 +2,7 @@ import "../stylesheets/filterBySpecies.scss";
 import PropTypes from "prop-types";
 
 const FilterBySpecies = (props) => {
+  // this funtion lifts the key and the value of the status checkbox
   const handleChange = (ev) => {
     props.handleFilter({
       key: "species",
