@@ -5,21 +5,16 @@
 .filters {
   &__form {
     &--nameTitle {
-      margin-right: 20px;
+      margin: 10px;
       @include tablet {
-        width: 20vw;
-      }
-      @include desktop {
-        width: 22vw;
+        // width: 20vw;
+        font-size: 20px;
       }
     }
     &--nameInput {
-      margin-right: 20px;
       @include tablet {
-        width: 20vw;
-      }
-      @include desktop {
-        width: 22vw;
+        margin-right: 20px;
+        // width: 20vw;
       }
     }
   }

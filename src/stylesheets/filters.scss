@@ -5,13 +5,15 @@
 .filters {
   width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 0 20px;
 
   &__form {
+    width: 100%;
+
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
     @include tablet {
       flex-direction: row;
       margin-top: 20px;

@@ -25,10 +25,12 @@ const FilterByStatus = (props) => {
   });
   return (
     <>
-      <label className="filters__form--statusTitle" htmlFor="status">
-        Status:
-      </label>
-      {statusList}
+      <legend className="checkboxWrapper">
+        <label className="filters__form--statusTitle" htmlFor="status">
+          Status:
+        </label>
+        {statusList}
+      </legend>
     </>
   );
 };
