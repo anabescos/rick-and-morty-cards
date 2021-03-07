@@ -2,6 +2,7 @@ import "../stylesheets/filterByName.scss";
 import PropTypes from "prop-types";
 
 const FilterByName = (props) => {
+  // listener to get the value and the key of the input
   const handleChange = (ev) => {
     props.handleFilter({
       key: "name",

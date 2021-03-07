@@ -3,6 +3,7 @@ import "../stylesheets/characterCard.scss";
 import PropTypes from "prop-types";
 
 function CharacterCard(props) {
+  // this funtion goes through the characters' status and gives it an icon according to it
   const statusIcon = () => {
     if (props.info.status === "Dead") {
       return <i className="fas fa-skull-crossbones"></i>;
@@ -13,6 +14,7 @@ function CharacterCard(props) {
     }
   };
   const speciesIcon = () => {
+    // same as previous function, but with the type of species
     return props.info.species === "Alien" ? (
       <i className="fas fa-pastafarianism"></i>
     ) : (

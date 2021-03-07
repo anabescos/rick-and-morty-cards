@@ -4,6 +4,7 @@ import "../stylesheets/characterDetail.scss";
 import PropTypes from "prop-types";
 
 function CharacterDetail(props) {
+  //if the input name does  not correspond to any of the names on the list from the information we get from the API, it returns an error message
   if (props.selectedCharacter === undefined) {
     return (
       <>
@@ -24,6 +25,7 @@ function CharacterDetail(props) {
       </>
     );
   } else {
+    // here we render the card with more details about the selected character
     return (
       <>
         <button className="linkButton">
