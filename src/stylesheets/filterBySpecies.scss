@@ -6,9 +6,21 @@
   &__form {
     &--speciesTitle {
       margin-right: 20px;
+      @include tablet {
+        width: 20vw;
+      }
+      @include desktop {
+        width: 22vw;
+      }
     }
     &--speciesInput {
       margin-right: 20px;
+      @include tablet {
+        width: 20vw;
+      }
+      @include desktop {
+        width: 22vw;
+      }
     }
   }
 }

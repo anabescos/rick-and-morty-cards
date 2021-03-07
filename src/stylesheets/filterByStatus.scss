@@ -1,0 +1,34 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+
+.filters {
+  &__form {
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &--statusTitle {
+      margin-right: 20px;
+      text-align: center;
+      @include tablet {
+        margin: 20px;
+      }
+      @include desktop {
+        margin: 30px 30px 30px 100px;
+      }
+    }
+    &--statusSubtitle {
+      text-align: left;
+      @include tablet {
+        margin: 20px;
+      }
+      @include desktop {
+        margin: 30px;
+      }
+    }
+    &--box {
+      margin-right: 20px;
+    }
+  }
+}

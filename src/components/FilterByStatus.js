@@ -1,3 +1,6 @@
+import "../stylesheets/filterByStatus.scss";
+import PropTypes from "prop-types";
+
 const FilterByStatus = (props) => {
   const handleChange = (ev) => {
     props.handleFilter({
@@ -8,8 +11,9 @@ const FilterByStatus = (props) => {
 
   const statusList = props.status.map((eachStatus, i) => {
     return (
-      <label key={i} className="">
+      <label key={i} className="filters__form--statusSubtitle">
         <input
+          className="filters__form--box"
           type="checkbox"
           name="status"
           value={eachStatus}
@@ -21,7 +25,7 @@ const FilterByStatus = (props) => {
   });
   return (
     <>
-      <label className="" htmlFor="status">
+      <label className="filters__form--statusTitle" htmlFor="status">
         Status:
       </label>
       {statusList}
@@ -29,4 +33,7 @@ const FilterByStatus = (props) => {
   );
 };
 
+FilterByStatus.propTypes = {
+  status: PropTypes.array,
+};
 export default FilterByStatus;

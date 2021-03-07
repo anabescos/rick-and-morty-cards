@@ -6,9 +6,21 @@
   &__form {
     &--nameTitle {
       margin-right: 20px;
+      @include tablet {
+        width: 20vw;
+      }
+      @include desktop {
+        width: 22vw;
+      }
     }
     &--nameInput {
       margin-right: 20px;
+      @include tablet {
+        width: 20vw;
+      }
+      @include desktop {
+        width: 22vw;
+      }
     }
   }
 }
