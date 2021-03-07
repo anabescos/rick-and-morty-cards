@@ -11,18 +11,29 @@ const App = () => {
   const [characters, setCharacters] = useState([]);
   const [name, setName] = useState("");
   const [species, setSpecies] = useState("All");
+  const [status, setStatus] = useState([]);
 
   useEffect(() => {
     getDataFromApi().then((data) => setCharacters(data));
   }, []);
-  // console.log(name);
+
   const handleFilter = (inputChange) => {
     if (inputChange.key === "name") {
       setName(inputChange.value);
     } else if (inputChange.key === "species") {
       setSpecies(inputChange.value);
+    } else if (inputChange.key === "status") {
+      const indexStatus = status.indexOf(inputChange.value);
+      if (indexStatus === -1) {
+        const newStatus = [...status, inputChange.value];
+        setStatus(newStatus);
+      } else {
+        const newStatus = status.filter((city) => {
+          return status !== inputChange.value;
+        });
+        setStatus(newStatus);
+      }
     }
-    // console.log(inputChange);
   };
 
   const filteredCharacters = characters
@@ -31,8 +42,15 @@ const App = () => {
     })
     .filter((character) => {
       return species === "All" ? true : character.species === species;
+    })
+    .filter((character) => {
+      return status.length === 0 ? true : status.includes(character.status);
     });
-
+  const getStatus = () => {
+    const status = characters.map((character) => character.status);
+    return [...new Set(status)];
+  };
+  console.log(status);
   const renderDetail = (props) => {
     const id = parseInt(props.match.params.id);
     const selectedCharacter = characters.find((character) => {
@@ -48,11 +66,7 @@ const App = () => {
         <main className="main">
           <Switch>
             <Route exact path="/">
-              <Filters
-                handleFilter={handleFilter}
-                name={name}
-                species={species}
-              />
+              <Filters handleFilter={handleFilter} status={getStatus()} />
               <CharacterList characters={filteredCharacters} />
             </Route>
             <Route path="/character/:id" render={renderDetail} />
