@@ -28,14 +28,13 @@ const App = () => {
         const newStatus = [...status, inputChange.value];
         setStatus(newStatus);
       } else {
-        const newStatus = status.filter((city) => {
-          return status !== inputChange.value;
-        });
+        const newStatus = [...status];
+        newStatus.splice(indexStatus, 1);
         setStatus(newStatus);
       }
     }
   };
-
+  console.log(status);
   const filteredCharacters = characters
     .filter((character) => {
       return character.name.toLowerCase().includes(name.toLowerCase());
@@ -46,11 +45,12 @@ const App = () => {
     .filter((character) => {
       return status.length === 0 ? true : status.includes(character.status);
     });
+
   const getStatus = () => {
     const status = characters.map((character) => character.status);
     return [...new Set(status)];
   };
-  console.log(status);
+
   const renderDetail = (props) => {
     const id = parseInt(props.match.params.id);
     const selectedCharacter = characters.find((character) => {
