@@ -9,7 +9,7 @@ const Filters = (props) => {
     ev.preventDefault();
   };
   const handleClick = () => {
-    props.resetButton();
+    // props.resetButton();
   };
 
   return (
@@ -26,7 +26,7 @@ const Filters = (props) => {
           statusOptions={props.statusOptions}
         />
         <button className="resetButton" value="reset" onClick={handleClick}>
-          <i class="fas fa-undo-alt"></i>
+          <i className="fas fa-undo-alt"></i>
         </button>
       </form>
     </section>
