@@ -8,6 +8,9 @@ const Filters = (props) => {
   const handleSubmit = (ev) => {
     ev.preventDefault();
   };
+  const handleClick = () => {
+    props.resetButton();
+  };
 
   return (
     <section className="filters">
@@ -22,6 +25,9 @@ const Filters = (props) => {
           status={props.status}
           statusOptions={props.statusOptions}
         />
+        <button className="resetButton" value="reset" onClick={handleClick}>
+          <i class="fas fa-undo-alt"></i>
+        </button>
       </form>
     </section>
   );

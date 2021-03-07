@@ -52,7 +52,12 @@ const App = () => {
     const status = characters.map((character) => character.status);
     return [...new Set(status)];
   };
-
+  const reset = () => {
+    setCharacters(characters);
+    setName("");
+    setSpecies("all");
+    setStatus([]);
+  };
   const renderDetail = (props) => {
     const id = parseInt(props.match.params.id);
     const selectedCharacter = characters.find((character) => {
@@ -74,6 +79,7 @@ const App = () => {
                 handleFilter={handleFilter}
                 statusOptions={getStatus()}
                 status={status}
+                resetButton={reset}
               />
               <CharacterList characters={filteredCharacters} />
             </Route>
