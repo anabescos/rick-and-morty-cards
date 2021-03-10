@@ -9,7 +9,7 @@ const Filters = (props) => {
     ev.preventDefault();
   };
   const handleClick = () => {
-    // props.resetButton();
+    props.resetButton();
   };
 
   return (

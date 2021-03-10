@@ -55,7 +55,7 @@ const App = () => {
   const reset = () => {
     setCharacters(characters);
     setName("");
-    setSpecies("all");
+    setSpecies("All");
     setStatus([]);
   };
   const renderDetail = (props) => {
