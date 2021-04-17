@@ -6,7 +6,7 @@ By using Dynamic Routing, you can click on each character card and it takes you 
 
 Shareable links: you can copy and paste the URL in your browser. If you paste the wrong URL it will give you an error message.
 
-The rendered list is sorted in alphabetical order.
+The rendered list is sorted by alphabetical order.
 
 If you want to work with the code, you just need to download it, npm install and npm start!
 
